@@ -1,0 +1,35 @@
+<mat-card class="container">
+  <mat-card-header>
+    <mat-card-title> Listar Jogos </mat-card-title>
+  </mat-card-header>
+  <mat-card-content> 
+
+    <table>
+      <tr>
+        <th>#</th>
+        <th>Seleção A</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>Seleção B</th>
+        <th>Criado Em</th>
+    
+      </tr>
+      <tr *ngFor="let jogo of jogos">
+        <td>{{ jogo.id }}</td>
+        <td>{{ jogo.selecaoA }}</td>
+        <td>{{ jogo.palpite1 }}</td>
+        <td>x</td>
+        <td>{{ jogo.palpite2}} </td>
+        <td>{{ jogo.selecaoB }}</td>
+        <td>{{ jogo.criadoEm }}</td>
+        <td>
+          <a routerLink="/pages/jogo/cadastrar/{{ jogo.id }}">
+            Palpitar
+          </a>
+        </td>
+      </tr>
+    </table>
+
+  </mat-card-content>
+</mat-card>
